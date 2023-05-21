@@ -98,7 +98,13 @@ General
 }
 
 .section {
-  padding: 120px 0;
+  padding: 96px 0;
+}
+
+@media screen and (min-width: 768px) {
+  .section {
+    padding: 120px 0;
+  }
 }
 
 .address {
@@ -254,7 +260,11 @@ Header
   color: var(--ocean);
 }
 
-/* Hero Section */
+/* 
+===============
+HERO SECTION 
+===============
+*/
 .hero {
   background-color: rgba(46, 47, 66, 0.7);
   background-image: linear-gradient(
@@ -265,19 +275,49 @@ Header
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
-  padding: 188px 0;
+  padding: 112px 0;
   max-width: 1440px;
   margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    padding: 188px 0;
+  }
 }
 
 .hero .headline {
   color: var(--white);
   font-weight: 700;
-  font-size: 56px;
+  font-size: 36px;
   line-height: 1.07;
+  text-align: center;
   letter-spacing: 0.02em;
-  margin: 0 auto 48px auto;
   max-width: 496px;
+  margin-top: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 72px;
+}
+
+@media screen and (min-width: 428px) {
+  .hero .headline {
+    max-width: 320px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero .headline {
+    font-size: 56px;
+    margin-bottom: 36px;
+    max-width: 496px;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .hero .headline {
+    margin-bottom: 48px;
+  }
 }
 
 .hero .btn {
@@ -288,36 +328,75 @@ Header
 
 /* 
 =================
-Strategy Section 
+STRATEGY SECTION
 =================
 */
 
 .strategy-card {
   display: flex;
-  gap: 24px;
+  gap: 72px 24px;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+  .strategy-card {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
 
 .strategy .strategy-item {
-  flex-basis: calc((100% - 72px) / 4);
+  flex-basis: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .strategy .strategy-item {
+    flex-basis: calc((100% - 24px) / 2);
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .strategy .strategy-item {
+    flex-basis: calc((100% - 72px) / 4);
+  }
 }
 
 .strategy-icons {
   background-color: var(--cloud);
   padding: 24px;
   margin-bottom: 8px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   border-radius: 4px;
+  display: none;
+}
+
+@media screen and (min-width: 1158px) {
+  .strategy-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .strategy .strategy-title {
   color: var(--navy-blue);
   font-weight: 500;
-  font-size: 20px;
+  font-size: 36px;
+  text-align: center;
   line-height: 1.2;
   letter-spacing: 0.02em;
   margin-bottom: 8px;
+}
+
+@media screen and (min-width: 768px) {
+  .strategy .strategy-title {
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .strategy .strategy-title {
+    font-size: 20px;
+  }
 }
 
 .strategy .strategy-text {
@@ -326,12 +405,19 @@ Strategy Section
 
 /* 
 ================
-Work Section
+WORK SECTION
 ================
 */
 
 .work {
   padding-top: 0;
+  display: none;
+}
+
+@media screen and (min-width: 1158px) {
+  .work {
+    display: block;
+  }
 }
 
 .work .work-headline {
@@ -355,7 +441,7 @@ Work Section
 
 /* 
 ===================
-Team Section
+TEAM SECTION
 ===================
  */
 .team {
@@ -375,16 +461,45 @@ Team Section
 
 .team-list {
   display: flex;
-  gap: 24px;
+  gap: 72px 24px;
+  flex-direction: column;
+  max-width: 264px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .team-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 552px;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .team-list {
+    max-width: unset;
+  }
 }
 
 .team .team-card {
   background-color: var(--white);
   text-align: center;
-  flex-basis: calc((100% - 72px) / 4);
+  flex-basis: 100%;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   border-radius: 0px 0px 4px 4px;
+}
+
+@media screen and (min-width: 768px) {
+  .team .team-card {
+    flex-basis: calc((100% - 24px) / 2);
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .team .team-card {
+    flex-basis: calc((100% - 72px) / 4);
+  }
 }
 
 .team .team-card .team-text {
@@ -436,7 +551,7 @@ Team Section
 
 /* 
 =================
-Customers Section
+CUSTOMERS SECTION
 =================
  */
 .customers .customers-headline {
@@ -452,17 +567,42 @@ Customers Section
 
 .customers .customers-list {
   display: flex;
-  justify-content: space-between;
-  gap: 24px;
+  gap: 72px 16px;
+  flex-wrap: wrap;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1157px) {
+  .customers .customers-list {
+    max-width: 552px;
+    margin: 0px auto;
+    gap: 72px 24px;
+  }
+}
+
+@media screen and (min-width: 1157px) {
+  .customers .customers-list {
+    gap: 72px 24px;
+  }
 }
 
 .customers .customers-icon {
   height: 88px;
-  flex-basis: calc((100% - 120px) / 6);
+  flex-basis: calc((100% - 16px) / 2);
+}
+
+@media screen and (min-width: 768px) {
+  .customers .customers-icon {
+    flex-basis: calc((100% - 48px) / 3);
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .customers .customers-icon {
+    flex-basis: calc((100% - 120px) / 6);
+  }
 }
 
 .customers .customers-icon .customers-link {
-  padding: 16px;
   border: 1px solid var(--light-slate);
   width: 100%;
   height: 100%;
@@ -587,25 +727,35 @@ Projects Section
 
 /* 
 ================
-Footer Section
+FOOTER SECTION
 ================
  */
 .footer {
   background-color: var(--navy-blue);
-  padding: 100px 0;
+  padding: 96px 0;
 }
 
 .footer .container {
   display: flex;
   align-items: baseline;
-  gap: 80px;
+  gap: 72px 80px;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+  .footer .container {
+    gap: 72px 24px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
 
 .footer .footer-logo {
   line-height: 1.17;
   margin-bottom: 16px;
-  display: inline-block;
+  display: block;
   padding: 0;
+  text-align: center;
 }
 
 .footer .footer-logo .logo-item {
@@ -615,8 +765,19 @@ Footer Section
 .footer .footer-text {
   color: var(--cloud);
   line-height: 1.5;
-  max-width: 264px;
-  margin-right: 40px;
+  max-width: 268px;
+  margin: 0px auto;
+}
+
+@media screen and (min-width: 1158px) {
+  .footer .footer-text {
+    margin-right: 40px;
+  }
+}
+
+.footer-socials {
+  max-width: 268px;
+  margin: 0px auto;
 }
 
 .footer .footer-socials-headline,
@@ -627,6 +788,7 @@ Footer Section
   line-height: 1.5;
   letter-spacing: 0.02em;
   margin-bottom: 16px;
+  text-align: center;
 }
 
 .footer .footer-socials .social-icons {
@@ -664,7 +826,8 @@ Footer Section
 .footer-newsletter--form .footer-form--wrapper {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 16px 24px;
+  flex-direction: column;
 }
 
 .footer-newsletter--form .footer-form--wrapper .footer-input {
@@ -678,6 +841,7 @@ Footer Section
   font-size: 12px;
   line-height: 2;
   height: 40px;
+  width: 100%;
 }
 
 .footer-newsletter--form .footer-form--wrapper .footer-input:focus {
