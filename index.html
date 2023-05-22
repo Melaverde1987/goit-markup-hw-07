@@ -18,33 +18,13 @@
     <title>Web Studio</title>
   </head>
   <body>
-    <!--
     <header class="header">
       <div class="container header-container">
         <nav class="nav">
           <a href="./index.html" class="logo"
             >Web<span class="logo-item">Studio</span></a
           >
-          <button
-            class="menu-toggle js-open-menu"
-            aria-expanded="false"
-            aria-controls="mobile-menu"
-          >
-            <svg
-              width="24"
-              height="24"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                clip-rule="evenodd"
-              ></path>
-            </svg>
-          </button>
-          <ul class="nav-list js-menu-container" id="mobile-menu">
+          <ul class="nav-list">
             <li class="nav-item">
               <a href="./index.html" class="nav-link active">Studio</a>
             </li>
@@ -54,22 +34,17 @@
             <li class="nav-item">
               <a href="" class="nav-link">Contacts</a>
             </li>
-            <button class="menu-toggle js-close-menu">
-              <svg
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                  clip-rule="evenodd"
-                ></path>
-              </svg>
-            </button>
           </ul>
+          <button
+            class="menu-toggle js-open-menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+            type="button"
+          >
+            <svg class="icon" width="32" height="22">
+              <use href="./images/icons.svg#burger-menu"></use>
+            </svg>
+          </button>
         </nav>
         <address class="address">
           <ul class="address-list">
@@ -87,7 +62,6 @@
         </address>
       </div>
     </header>
-  -->
 
     <main>
       <section class="section hero">
@@ -535,6 +509,78 @@
         </form>
       </div>
     </div>
+
+    <!--
+      MOBILE MENU
+    -->
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button type="button" class="menu-toggle js-close-menu">
+        <svg class="close-icon" width="8" height="8">
+          <use href="./images/icons.svg#close-button"></use>
+        </svg>
+      </button>
+
+      <ul class="mobile-menu">
+        <li class="mobile-menu--item">
+          <a href="./index.html" class="mobile-menu--link">Studio</a>
+        </li>
+        <li class="mobile-menu--item">
+          <a href="./portfolio.html" class="mobile-menu--link">Portfolio</a>
+        </li>
+        <li class="mobile-menu--item">
+          <a href="" class="mobile-menu--link">Contacts</a>
+        </li>
+      </ul>
+
+      <div class="mobile-contacts">
+        <address class="address">
+          <ul class="address-list">
+            <li class="address-item">
+              <a href="mailto:info@devstudio.com" class="address-link"
+                >info@devstudio.com</a
+              >
+            </li>
+            <li class="address-item">
+              <a href="tel:+110001111111" class="address-link"
+                >+11 (000) 111-11-11</a
+              >
+            </li>
+          </ul>
+        </address>
+
+        <ul class="social-icons">
+          <li class="social-icons-box">
+            <a href="/" class="social-icon">
+              <svg class="icon" width="24" height="24">
+                <use href="./images/icons.svg#instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-icons-box">
+            <a href="/" class="social-icon">
+              <svg class="icon" width="24" height="24">
+                <use href="./images/icons.svg#twitter"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-icons-box">
+            <a href="/" class="social-icon">
+              <svg class="icon" width="24" height="24">
+                <use href="./images/icons.svg#facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-icons-box">
+            <a href="/" class="social-icon">
+              <svg class="icon" width="24" height="24">
+                <use href="./images/icons.svg#linkedin"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
     <script src="./js/modal.js"></script>
     <script
       defer
