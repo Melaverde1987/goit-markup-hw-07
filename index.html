@@ -134,13 +134,13 @@
           <h2 class="work-headline">What are we doing</h2>
           <ul class="work-list">
             <li class="work-image">
-              <img src="./images/work/img1.jpg" alt="our-work" />
+              <img src="./images/work/img1.jpg" alt="our-work" loading="lazy" />
             </li>
             <li class="work-image">
-              <img src="./images/work/img2.jpg" alt="our-work" />
+              <img src="./images/work/img2.jpg" alt="our-work" loading="lazy" />
             </li>
             <li class="work-image">
-              <img src="./images/work/img3.jpg" alt="our-work" />
+              <img src="./images/work/img3.jpg" alt="our-work" loading="lazy" />
             </li>
           </ul>
         </div>
@@ -151,7 +151,17 @@
           <h2 class="team-headline">Our team</h2>
           <ul class="team-list">
             <li class="team-card">
-              <img src="./images/team/team1.jpg" alt="our-team" />
+              <img
+                srcset="
+                  ./images/team/team1-264.jpg 264w,
+                  ./images/team/team1-528.jpg 528w,
+                  ./images/team/team1-792.jpg 792w
+                "
+                sizes="264px"
+                src="./images/team/team1-264.jpg"
+                alt="our-team"
+                loading="lazy"
+              />
               <div class="team-text">
                 <h3 class="team-title">Mark Guerrero</h3>
                 <p class="team-description">Product Designer</p>
@@ -188,7 +198,17 @@
               </div>
             </li>
             <li class="team-card">
-              <img src="./images/team/team2.jpg" alt="our-team" />
+              <img
+                srcset="
+                  ./images/team/team2-264.jpg 264w,
+                  ./images/team/team2-528.jpg 528w,
+                  ./images/team/team2-792.jpg 792w
+                "
+                sizes="264px"
+                src="./images/team/team2-264.jpg"
+                alt="our-team"
+                loading="lazy"
+              />
               <div class="team-text">
                 <h3 class="team-title">Tom Ford</h3>
                 <p class="team-description">Frontend Developer</p>
@@ -225,7 +245,17 @@
               </div>
             </li>
             <li class="team-card">
-              <img src="./images/team/team3.jpg" alt="our-team" />
+              <img
+                srcset="
+                  ./images/team/team3-264.jpg 264w,
+                  ./images/team/team3-528.jpg 528w,
+                  ./images/team/team3-792.jpg 792w
+                "
+                sizes="264px"
+                src="./images/team/team2-264.jpg"
+                alt="our-team"
+                loading="lazy"
+              />
               <div class="team-text">
                 <h3 class="team-title">Camila Garcia</h3>
                 <p class="team-description">Marketing</p>
@@ -262,7 +292,17 @@
               </div>
             </li>
             <li class="team-card">
-              <img src="./images/team/team4.jpg" alt="our-team" />
+              <img
+                srcset="
+                  ./images/team/team4-264.jpg 264w,
+                  ./images/team/team4-528.jpg 528w,
+                  ./images/team/team4-792.jpg 792w
+                "
+                sizes="264px"
+                src="./images/team/team2-264.jpg"
+                alt="our-team"
+                loading="lazy"
+              />
               <div class="team-text">
                 <h3 class="team-title">Daniel Wilson</h3>
                 <p class="team-description">UI Designer</p>
