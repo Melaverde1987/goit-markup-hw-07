@@ -751,13 +751,13 @@ CUSTOMERS SECTION
 
 /* 
 ======================
-Portfolio
+PORTFOLIO
 ======================
 */
 
 /* 
 =================
-Projects Section
+PROJECTS SECTION
 =================
  */
 
@@ -767,20 +767,45 @@ Projects Section
 
 .projects .buttons-list {
   display: flex;
-  gap: 24px;
+  gap: 16px 24px;
   justify-content: center;
   margin-bottom: 72px;
 }
 
+@media only screen and (max-width: 767px) {
+  .projects .buttons-list {
+    flex-wrap: wrap;
+    justify-content: start;
+  }
+}
+
 .projects .projects-list {
   display: flex;
-  column-gap: 24px;
-  row-gap: 48px;
+  gap: 48px 24px;
   flex-wrap: wrap;
+  flex-direction: column;
+}
+
+@media only screen and (min-width: 768px) {
+  .projects .projects-list {
+    flex-direction: row;
+  }
 }
 
 .projects .projects-list .project-card {
-  flex-basis: calc((100% - 48px) / 3);
+  flex-basis: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  .projects .projects-list .project-card {
+    flex-basis: calc((100% - 24px) / 2);
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .projects .projects-list .project-card {
+    flex-basis: calc((100% - 48px) / 3);
+  }
 }
 
 .projects .projects-list .project-card .project-link {
